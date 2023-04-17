@@ -11,7 +11,7 @@ Telegram Monitor is a Python script that scans messages from all channels and gr
 
 1. Create a new directory for the project and navigate to it in your terminal.
 2. Clone or download the `telegram_monitor.py` and `schedule.sh` files into the project directory.
-3. Install the Telethon library:
+3. Install the Telethon library
 
 
 `usage`
