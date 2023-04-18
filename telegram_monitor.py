@@ -11,13 +11,17 @@ logging.basicConfig(filename='telegram_monitor.log', level=logging.INFO, format=
 with open('config.json', 'r') as config_file:
     config = json.load(config_file)
 
+# Load keywords configuration
+with open('keywords.json', 'r') as keywords_file:
+    keywords_config = json.load(keywords_file)
+
 api_id = config['api_id']
 api_hash = config['api_hash']
 phone_number = config['phone_number']
 second_account_id = config['second_account_id']
+keywords = keywords_config['keywords']
 
 def check_keywords(text: str) -> bool:
-    keywords = ["word1", "word2", "word3"]
     return any(keyword.lower() in text.lower() for keyword in keywords)
 
 async def search_messages(client, entity):
